@@ -1,0 +1,110 @@
+@charset "gb2312";
+/* media css Document */
+@media screen and (max-width: 754px) {
+    .ibody {
+        width: 90%;
+        margin: auto;
+        box-shadow: 0px 2px 5px #666;
+    }
+
+    article {
+        float: none;
+        width: 100%;
+        margin-top: 20px;
+        background: #fff;
+    }
+
+
+    header {
+        background: url(../images/ms8.png) top right no-repeat #FFF;
+    }
+
+    aside, .dateview {
+        display: none
+    }
+
+    nav {
+        padding-left: 0;
+        text-align: center
+    }
+    header nav .pull-right {
+        padding-left: 0;
+    }
+
+    nav a {
+        padding: 0;
+    }
+    header .nav{
+       padding-left: 0px;
+    }
+
+    .banner {
+        background-size: auto;
+        height: 130px;
+        font-size: 12px;
+        font-family: "Microsoft Yahei", Arial, Helvetica, sans-serif;
+    }
+
+    .texts {
+        line-height: 36px;
+        padding: 20px 0 0 10px;
+        text-shadow: 1px 1px rgba(255, 255, 255, 0.3);
+    }
+
+    .blogs::after {
+        background: none
+    }
+
+    .autor span {
+        margin: 0 5px 0 0;
+      
+    }
+
+    .blogs figure {
+        width: 35%;
+    }
+
+    .blogs ul {
+        width: 62%;
+    }
+}
+@media screen and (max-width: 454px) {
+    article {
+        float: none;
+        width: 100%
+    }
+
+    .logo {
+        position: static;
+        margin: 0 auto 10px
+    }
+
+    .texts {
+        line-height: 36px;
+        padding: 20px 0 0 10px;
+        text-shadow: 1px 1px rgba(255, 255, 255, 0.3);
+    }
+
+    /*.blogs::after, .newblog::after {*/
+        /*background: none*/
+    /*}*/
+
+    .blogs figure,.newblog figure {
+        width: 100%;
+        float: none;
+    }
+    .blogs ul, .newblog ul {
+        width: 100%;
+        float: none;
+    }
+
+    .blogs {
+        margin: 0 10px 10px 10px;
+    }
+}
+@media screen and (max-width:400px ) {
+	.autor span:nth-child(2) {
+        display: none;
+      
+    }
+}

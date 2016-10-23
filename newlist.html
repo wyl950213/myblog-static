@@ -1,0 +1,294 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+  <title>黑色Html5响应式个人博客模板――主题《如影随形》</title>
+  <meta name="keywords" content="个人博客模板,博客模板,响应式" />
+  <meta name="description" content="如影随形主题的个人博客模板，神秘、俏皮。" />
+  <link href="js/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/base.css" rel="stylesheet">
+  <link href="css/index.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/about.css" rel="stylesheet">
+  <link href="css/media.css" rel="stylesheet">
+  <script src="js/jquery-3.1.0.js"></script>
+  <script src="js/jquery.form.min.js"></script>
+  <script src="js/bootstrap/js/bootstrap.min.js"></script>
+  <script src="js/jquery.validate.js"></script>
+  <script src="js/jquery.cookie.js"></script>
+  <script src="js/navjs.js"></script>
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+<!--[if lt IE 9]>
+<script src="js/modernizr.js"></script>
+<![endif]-->
+
+</head>
+<body>
+<div class="ibody">
+  <header>
+    <h1>如影随形</h1>
+    <h2>影子是一个会撒谎的精灵，它在虚空中流浪和等待被发现之间;在存在与不存在之间....</h2>
+    <div class="logo"><a href="/"></a></div>
+    <button type="button" class="navbar-toggle collapsed " data-toggle="collapse" data-target="#topnav">导航
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <nav class="collapse navbar-collapse" id="topnav">
+      <ul class="navbar-nav nav ">
+        <li>
+          <a href="index.html">首页</a>
+        </li>
+        <li>
+          <a href="newlist.html">慢生活</a>
+        </li>
+        <li>
+          <a href="about.html">关于我</a>
+        </li>
+        <ul class="pull-right navbar-nav">
+          <li id="login_in" class="btn" data-toggle="modal" data-target="#login">
+            <a href="javascript:void (0)">登录</a>
+          </li>
+          <li id="register" class="btn" data-toggle="modal" data-target="#reg">
+            <a href="javascript:void (0)">注册</a>
+          </li>
+          <li id="user">
+            <a href="javascript:void (0)">王亚龙</a>
+          </li>
+          <li id="login_out">
+            <a href="javascript:void (0)">退出</a>
+          </li>
+        </ul>
+        <!--登录-->
+
+        <!--注册-->
+      </ul>
+    </nav>
+  </header>
+  <div class="modal fade" id="reg" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+            &times;
+          </button>
+          <h4 class="modal-title">
+            欢迎注册
+          </h4>
+        </div>
+        <div class="modal-body">
+          <form class="form-horizontal" role="form" id="form_reg">
+            <div class="form-group">
+              <label for="reg_user" class="col-sm-2 control-label">账号：</label>
+              <div class="col-sm-6">
+                <input type="text" class="form-control col-sm-6" name="reg_user" id="reg_user" placeholder="请输入账号">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="reg_password" class="col-sm-2 control-label">密码：</label>
+              <div class="col-sm-6">
+                <input type="password" class="form-control" name="reg_password" id="reg_password" placeholder="请输入密码">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="reg_password_again" class="col-sm-2 control-label">确认密码：</label>
+              <div class="col-sm-6">
+                <input type="password" class="form-control col-sm-6" name="reg_password_again" placeholder="请再次输入密码">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email" class="col-sm-2 control-label">邮箱：</label>
+              <div class="col-sm-6">
+                <input type="text" class="form-control col-sm-6" name="email" placeholder="请输入邮箱，方便密码忘记时找回">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-default">注册</button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <h4>点击空白处或者按下ESC键可推出</h4>
+        </div>
+      </div>
+      <!-- /.modal-content -->
+    </div>
+    <!-- /.modal -->
+  </div>
+  <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+            &times;
+          </button>
+          <h4 class="modal-title">
+            欢迎登录
+          </h4>
+        </div>
+        <div class="modal-body">
+          <form class="form-horizontal" role="form" id="form_login">
+            <div class="form-group">
+              <label for="user" class="col-sm-2 control-label">账号：</label>
+              <div class="col-sm-5">
+                <input type="text" class="form-control required" name="login_user" placeholder="请输入账号" id="login_user">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="password" class="col-sm-2 control-label">密码:</label>
+              <div class="col-sm-5">
+                <input type="password" class="form-control" name="login_password" placeholder="请输入密码">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-offset-2 col-sm-4">
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" id="checkbox"> 请记住我
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-default">登录</button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <h4>点击空白处或者按下ESC键可推出</h4>
+        </div>
+      </div>
+      <!-- /.modal-content -->
+    </div>
+    <!-- /.modal -->
+  </div>
+  <article>
+    <div class="bloglist">
+    </div>
+    <div class="page"><a title="Total record"><b>113</b></a><b>1</b><a href="/">2</a><a href="/">3</a><a href="/">4</a><a href="/">5</a><a href="/">&gt;</a><a href="/">&gt;&gt;</a></div>
+  </article>
+  <aside>
+    <div class="rnav">
+      <li class="rnav1 "><a href="/">日记</a></li>
+      <li class="rnav2 "><a href="/">欣赏</a></li>
+      <li class="rnav3 "><a href="/">程序人生</a></li>
+      <li class="rnav4 "><a href="/">经典语录</a></li>
+    </div>
+    <div class="ph_news">
+      <h2>
+        <p>点击排行</p>
+      </h2>
+      <ul class="ph_n">
+        <li><span class="num1">1</span><a href="/">有一种思念，是淡淡的幸福,一个心情一行文字</a></li>
+        <li><span class="num2">2</span><a href="/">励志人生-要做一个潇洒的女人</a></li>
+        <li><span class="num3">3</span><a href="/">女孩都有浪漫的小情怀――浪漫的求婚词</a></li>
+        <li><span>4</span><a href="/">Green绿色小清新的夏天-个人博客模板</a></li>
+        <li><span>5</span><a href="/">女生清新个人博客网站模板</a></li>
+        <li><span>6</span><a href="/">Wedding-婚礼主题、情人节网站模板</a></li>
+        <li><span>7</span><a href="/">Column 三栏布局 个人网站模板</a></li>
+        <li><span>8</span><a href="/">时间煮雨-个人网站模板</a></li>
+        <li><span>9</span><a href="/">花气袭人是酒香―个人网站模板</a></li>
+      </ul>
+      <h2>
+        <p>栏目推荐</p>
+      </h2>
+      <ul>
+        <li><a href="/">有一种思念，是淡淡的幸福,一个心情一行文字</a></li>
+        <li><a href="/">励志人生-要做一个潇洒的女人</a></li>
+        <li><a href="/">女孩都有浪漫的小情怀――浪漫的求婚词</a></li>
+        <li><a href="/">Green绿色小清新的夏天-个人博客模板</a></li>
+        <li><a href="/">女生清新个人博客网站模板</a></li>
+        <li><a href="/">Wedding-婚礼主题、情人节网站模板</a></li>
+        <li><a href="/">Column 三栏布局 个人网站模板</a></li>
+        <li><a href="/">时间煮雨-个人网站模板</a></li>
+        <li><a href="/">花气袭人是酒香―个人网站模板</a></li>
+      </ul>
+      <h2>
+        <p>最新评论</p>
+      </h2>
+      <ul class="pl_n">
+        <dl>
+          <dt><img src="images/s8.jpg"> </dt>
+          <dt> </dt>
+          <dd>DanceSmile
+            <time>49分钟前</time>
+          </dd>
+          <dd><a href="/">文章非常详细，我很喜欢.前端的工程师很少，我记得几年前yahoo花高薪招聘前端也招不到</a></dd>
+        </dl>
+        <dl>
+          <dt><img src="images/s7.jpg"> </dt>
+          <dt> </dt>
+          <dd>yisa
+            <time>2小时前</time>
+          </dd>
+          <dd><a href="/">我手机里面也有这样一个号码存在</a></dd>
+        </dl>
+        <dl>
+          <dt><img src="images/s6.jpg"> </dt>
+          <dt> </dt>
+          <dd>小林博客
+            <time>8月7日</time>
+          </dd>
+          <dd><a href="/">博客色彩丰富，很是好看</a></dd>
+        </dl>
+        <dl>
+          <dt><img src="images/003.jpg"> </dt>
+          <dt> </dt>
+          <dd>DanceSmile
+            <time>49分钟前</time>
+          </dd>
+          <dd><a href="/">文章非常详细，我很喜欢.前端的工程师很少，我记得几年前yahoo花高薪招聘前端也招不到</a></dd>
+        </dl>
+        <dl>
+          <dt><img src="images/002.jpg"> </dt>
+          <dt> </dt>
+          <dd>yisa
+            <time>2小时前</time>
+          </dd>
+          <dd><a href="/">我手机里面也有这样一个号码存在</a></dd>
+        </dl>
+      </ul>
+      <h2>
+        <p>最近访客</p>
+        <ul>
+          <img src="images/vis.jpg"><!-- 直接使用“多说”插件的调用代码 -->
+        </ul>
+      </h2>
+    </div>
+  </aside>
+
+  <div class="clear"></div>
+  <!-- 清除浮动 --> 
+</div>
+</body>
+</html>
+<script>
+  var json=[{"count":"3","title":"感悟人生","content":"距离，可以产生美，也能酝酿出苦涩。每个人，都在争取一个完满的人生。" +
+  "做人要大气，这既是一种品格，也是一种境界。大气的人生，什么时候都会是光风霁月，阳光明媚；" +
+  "不大气的人生，什么时候都是愁眉苦脸，忧忧戚戚，这样活着实在猥琐。","author":"王亚龙","class":"日记","date":"2016-10-19 18:00:00","view":"21","comment":"23","img":"./images/006.jpg"},
+    {"count":"3","title":"浅谈数据结构","content":"<p>数据结构与算法的内容还有很多。但是由于时间的关系，我并没有深入下去，尤其是查找时用到的平衡二叉树、B_和B+树，还有红黑树等等。希望以后有时间可以继续看。</p><p>其次，数据结构并不是死的：你可以根据自己的需要定制数据结构的成员。而这些成员又决定了对应于这种结构的算法。因此，数据结构跟算法之间并不是孤立的，而是紧密联系的一体：对于有的算法，比如返回树中一个节点的父节点，如果你在树结构中添加一个parent指针，就很好办，如果没有这个指针，做起来就会很纠结。</p>","author":"thefutureisour","class":"IT ","date":"2016-10-19 07:14:11","view":"23","comment":"12","img":"./images/shujujiegou.jpg"},
+    {"count":"3","title":"生活，就是这样子","content":"也许灰色的天，会让心情沉落，但一声鸟鸣，可扬起期待的眼睛。 也许狂风暴雨，阻碍了脚步，但雨后的彩虹，可晕染错失的美丽。也许阳光普照，一路坦途，但密集的尘埃，却在灿烂中肆意跳舞。也许鲜花盛放，满园熏香，但紧挨的花丛下，却有垃圾堆积肮脏。生活,就是这","author":"王亚龙","class":"心情漫步","date":"2016-10-19 00:00:00","view":"24","comment":"12","img":"./images/01.jpg"},
+    {"count":"3","title":"如何在不适用360等软件的情况下给C盘瘦身","content":"1.在桌面新建一个txt文件。2.将以下代码拷入其中3。将文件扩展名改为bat4.双击桌面图标开始清理垃圾，直至出现清除系统LJ完成！输入任意继续....。","author":"王亚龙","class":"IT","date":"2016-10-18 18:16:13","view":"23","comment":"22","img":"./images/it001.jpg"},
+    {"count":"3","title":"一个前端的自我修养","content":"今天给大家分享的主题是前端的自我成长，这是一个关于成长的话题。很多人都有这样的感觉：听了很多技术圈子的分享，有的有深度，有的循循善诱，深入浅出，但是呢，几年下来，到底哪些用上了，哪些对自己真的有帮助了?反而有些模糊。2015 年我在不同的场合分享了很多内容：有移动端的性能、有适配、有 Web vs Native，也有 hybrid，但是其实我一直比较担心，真正有深度的内容，其实面向的是比较小众的群体，比如说Hybrid，其实它在大部分公司里面，是只能用现成的。所以我这一次尝试分享一个我认为可以帮助到所有前端的话题，关于前端的成长，如果说这个分享的内容，听众里面有那么几十个人拿到 BAT 的 offer，或者升职加薪，那么我觉得我就认为我取得了成功。  前端其实是个特别苦逼的职业，因为前端技术一直革命的特别快，新技术、新技巧在不断地被发明出来。之前我有一个朋友，他讲说他对自己的认知是了解前端、熟悉前端、精通前端、熟悉前端、不懂前端。为什么呢，他说当他觉得自己对前端所有的东西觉得无所不知，无所不能的时候，忽然看到了一段代码，他完全无法理解，于是整个世界就崩塌了，从此再也不敢说自己会前端。  我就跟他说，这里，缺少的是一种正确的方法，你觉得无所不知、无所不能的标准是什么，是工作中很久没遇到解决不了的问题么？他说还真是这样。我就又问他，那你系统学过前端么？他想了想，还真没学过，大学里不开这个课。的确如此，到目前为止，还没有任何一个大学会教前端，倒是有些培训班，会讲网页开发三剑客。我这里讲的内容，希望带给大家的，就是该如何学习前端，实现自身成长。","author":"ITDogFire","class":"it","date":"2016-10-17 20:17:06","view":"344",
+      "comment":"43","img":"./images/003.jpg"}
+  ];
+  var html="";
+  console.log(json.length);
+  for(var i = 0; i < json.length; i++) {
+    console.log("hello");
+    html += "<div class='newblog'><ul><h3><a>"+json[i].title+"</a></h3><div class='author'><span>作者："+
+            json[i].author+"<span><span>分类：【<a>"+json[i].class+"</a>】<span>浏览（<a>"+
+            json[i].view+"</a>)<span>评论（<a>"+json[i].comment+"</a>)</span></div><p>"+
+            json[i].content+"</p><a href='/' target='blank' class='readmore'>全文</a></ul>"+
+            '<figure><img src="'+json[i].img+'" ></figure><div class="dateview">'+json[i].date+
+            "</div></div>"
+    console.log(html);
+  }
+  $(".bloglist").append(html);
+</script>

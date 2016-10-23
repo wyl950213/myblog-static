@@ -1,0 +1,222 @@
+﻿<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+	<title>黑色Html5响应式个人博客模板――主题《如影随形》</title>
+	<meta name="keywords" content="个人博客模板,博客模板,响应式" />
+	<meta name="description" content="如影随形主题的个人博客模板，神秘、俏皮。" />
+	<link href="js/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/jquery-ui-1.10.4.custom.min.css" rel="stylesheet">
+	<link href="css/base.css" rel="stylesheet">
+	<link href="css/index.css" rel="stylesheet">
+	<link href="css/about.css" rel="stylesheet">
+	<link href="css/media.css" rel="stylesheet">
+	<script src="js/jquery-3.1.0.js"></script>
+	<script src="js/jquery-ui-1.10.4.custom.min.js"></script>
+	<script src="js/jquery.form.min.js"></script>
+	<script src="js/bootstrap/js/bootstrap.min.js"></script>
+	<script src="js/jquery.validate.js"></script>
+	<script src="js/jquery.cookie.js"></script>
+	<script src="js/navjs.js"></script>
+	<!--[if lt IE 9]>
+	<script src="js/modernizr.js"></script>
+	<![endif]-->
+</head>
+<body>
+<div class="ibody">
+	<header>
+		<h1>如影随形</h1>
+		<h2>影子是一个会撒谎的精灵，它在虚空中流浪和等待被发现之间;在存在与不存在之间....</h2>
+		<div class="logo"><a href="/"></a></div>
+		<button type="button" class="navbar-toggle collapsed " data-toggle="collapse" data-target="#topnav">导航
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</button>
+		<nav class="collapse navbar-collapse" id="topnav">
+			<ul class="navbar-nav nav ">
+				<li>
+					<a href="index.html">首页</a>
+				</li>
+				<li>
+					<a href="newlist.html">慢生活</a>
+				</li>
+				<li>
+					<a href="about.html">关于我</a>
+				</li>
+				<ul class="pull-right navbar-nav">
+					<li id="login_in" class="btn" data-toggle="modal" data-target="#login">
+						<a href="javascript:void (0)">登录</a>
+					</li>
+					<li id="register" class="btn" data-toggle="modal" data-target="#reg">
+						<a href="javascript:void (0)">注册</a>
+					</li>
+					<li id="user">
+						<a href="javascript:void (0)">王亚龙</a>
+					</li>
+					<li id="login_out">
+						<a href="javascript:void (0)">退出</a>
+					</li>
+				</ul>
+				<!--登录-->
+
+				<!--注册-->
+			</ul>
+		</nav>
+	</header>
+	<div class="modal fade" id="reg" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+						&times;
+					</button>
+					<h4 class="modal-title">
+						欢迎注册
+					</h4>
+				</div>
+				<div class="modal-body">
+					<form class="form-horizontal" role="form" id="form_reg">
+						<div class="form-group">
+							<label for="reg_user" class="col-sm-2 control-label">账号：</label>
+							<div class="col-sm-6">
+								<input type="text" class="form-control col-sm-6" name="reg_user" id="reg_user" placeholder="请输入账号">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="reg_password" class="col-sm-2 control-label">密码：</label>
+							<div class="col-sm-6">
+								<input type="password" class="form-control" name="reg_password" id="reg_password" placeholder="请输入密码">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="reg_password_again" class="col-sm-2 control-label">确认密码：</label>
+							<div class="col-sm-6">
+								<input type="password" class="form-control col-sm-6" name="reg_password_again" placeholder="请再次输入密码">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="email" class="col-sm-2 control-label">邮箱：</label>
+							<div class="col-sm-6">
+								<input type="text" class="form-control col-sm-6" name="email" placeholder="请输入邮箱，方便密码忘记时找回">
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-sm-offset-2 col-sm-10">
+								<button type="submit" class="btn btn-default">注册</button>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<h4>点击空白处或者按下ESC键可推出</h4>
+				</div>
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal -->
+	</div>
+	<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+						&times;
+					</button>
+					<h4 class="modal-title">
+						欢迎登录
+					</h4>
+				</div>
+				<div class="modal-body">
+					<form class="form-horizontal" role="form" id="form_login">
+						<div class="form-group">
+							<label for="user" class="col-sm-2 control-label">账号：</label>
+							<div class="col-sm-5">
+								<input type="text" class="form-control required" name="login_user" placeholder="请输入账号" id="login_user">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="password" class="col-sm-2 control-label">密码:</label>
+							<div class="col-sm-5">
+								<input type="password" class="form-control" name="login_password" placeholder="请输入密码">
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-sm-offset-2 col-sm-4">
+								<div class="checkbox">
+									<label>
+										<input type="checkbox" id="checkbox"> 请记住我
+									</label>
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-sm-offset-2 col-sm-10">
+								<button type="submit" class="btn btn-default">登录</button>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<h4>点击空白处或者按下ESC键可推出</h4>
+				</div>
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal -->
+	</div>
+	<article>
+		<div class="about">
+			<h2>Just about me</h2>
+			<ul>
+				参考消息网10月22日报道 港媒称，韩国计划部署美军“萨德”导弹防御系统，中国即频密披露解放军反导系统“回礼”。继早前透露使用中段反导技术的“华版萨德”红旗19研发消息后，内地官媒再“间接”公开已成功进行难度更大的末段反导技术测试。
+
+				据香港《东方日报》10月21日报道，内地官媒17日报道神舟飞船时，公开酒泉基地史料馆内部画面，可见墙上奖章文字显示，2011年5月的首次末段反导测试成功，同年并进行首次高超音速飞行器测试。内地军事评论员指，末段反导兼具战术性和战略性意义，此次公布说明中国已具备相对完善的反导能力，并在末段反导系统研制方面走在世界前列。
+
+				报道还称，中国 外交部 网站公布部长助理孔铉佑近日在首尔，同韩国外交部部长助理金炯辰举行中韩外交磋商，就双边关系、朝鲜半岛形势等交换意见。孔铉佑强调中韩关系来之不易，应倍加珍惜，并重申反对部署“萨德”，促韩方慎重行事。
+				<p>
+					据《今日俄罗斯》报道，一架米-8直升机在俄罗斯西伯利亚西北的亚马尔半岛硬着陆失败。搜救行动正在进行当中。另据中新网消息，俄罗斯航空署代表称，目前已经与机长取得联系，他表示，直升机侧翻，共造成21人死亡。
+
+					直升机上共有22名乘客和3名机组人员。他说：“出事地点正在确认。当地天气恶劣，并且处于黑夜。”此前，俄罗斯经济事务部告知塔斯社的消息称，机上只有3人幸存，其他19人遇难。
+
+					有消息表示，一名幸存者通过手机联到了救援人员。该男子称自己被困在废墟之中，当时也不清楚其他乘客和机组人员的状况。目前，第一个被发现的幸存者受伤严重，已经通过直升机送往医院治。
+
+					两架载有救护、救援人员的直升机已经抵达事故现场，目前140人参与到救援行动当中。
+				</p>
+				<p>
+					今天，我们在这里隆重集会，纪念中国工农红军长征胜利80周年。红军长征的那个年代，中国处在半殖民地半封建社会的黑暗境地，社会危机四伏，日寇野蛮侵略，国民党反动派置民族危亡于不顾，向革命根据地连续发动大规模“围剿”，中国共产党和红军到了危急关头，中国革命到了危急关头，中华民族到了危急关头。
+
+					面对生死存亡的严峻考验，从1934年10月至1936年10月，红军第一、第二、第四方面军和第二十五军进行了伟大的长征。我们党领导红军，以非凡的智慧和大无畏的英雄气概，战胜千难万险，付出巨大牺牲，胜利完成震撼世界、彪炳史册的长征，宣告了国民党反动派消灭中国共产党和红军的图谋彻底失败，宣告了中国共产党和红军肩负着民族希望胜利实现了北上抗日的战略转移，实现了中国共产党和中国革命事业从挫折走向胜利的伟大转折，开启了中国共产党为实现民族独立、人民解放而斗争的新的伟大进军。
+
+					这一惊天动地的革命壮举，是中国共产党和红军谱写的壮丽史诗，是中华民族伟大复兴历史进程中的巍峨丰碑。
+
+					在这里，我代表党中央、国务院和中央军委，代表全党全军全国各族人民，向领导红军创造这一历史伟业的毛泽东、周恩来、朱德同志等老一辈革命家，向在长征中浴血奋战和在各地坚持革命斗争的红军指战员，向当年支援红军长征的各族人民特别是各革命根据地人民，向所有健在的红军老战士，致以崇高的敬意！
+				</p>
+			</ul>
+		</div>
+	</article>
+	<aside>
+		<div class="avatar"><a href="about.html"><span>关于博主</span></a></div>
+		<div class="topspaceinfo">
+			<h1>执子之手，与子偕老</h1>
+			<p>于千万人之中，我遇见了我所遇见的人....</p>
+		</div>
+		<div class="about_c">
+			<p>网名：Quorras’chordAaron|心弦</p>
+			<p>职业：WEB前端开发</p>
+			<p>籍贯：河南省</p>
+			<p>电话：15736927128</p>
+			<p>邮箱：wylhsd@163.com</p>
+			<p><a target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&amp;email=HHh9cn95b3F1cHVye1xtbTJ-c3E" ><img src="http://rescdn.qqmail.com/zh_CN/htmledition/images/function/qm_open/ico_mailme_22.png" ></a></p>
+			<p>
+				<!--以下是QQ邮件列表订阅嵌入代码--><a target="_blank" href="http://list.qq.com/cgi-bin/qf_invite?id=65fb9b3618916f162973471ebc5b97ff786efae0ec9a863e"><img border="0" alt="填写您的邮件地址，订阅我们的精彩内容：" src="http://rescdn.list.qq.com/zh_CN/htmledition/images/qunfa/manage/picMode_light_m.png" /></a> </p>
+		</div>
+	</aside>
+	<script src="js/silder.js"></script>
+	<div class="clear"></div>
+	<!-- 清除浮动 -->
+</div>
+</body>
+</html>
