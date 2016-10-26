@@ -67,6 +67,12 @@
     .blogs ul {
         width: 62%;
     }
+    article .about{
+        padding-top: 70px;
+    }
+    article .bloglist{
+        padding-top: 70px;
+    }
 }
 @media screen and (max-width: 454px) {
     article {
@@ -84,6 +90,7 @@
         padding: 20px 0 0 10px;
         text-shadow: 1px 1px rgba(255, 255, 255, 0.3);
     }
+
 
     /*.blogs::after, .newblog::after {*/
         /*background: none*/
