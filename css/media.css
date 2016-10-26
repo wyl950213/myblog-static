@@ -67,7 +67,11 @@
     .blogs ul {
         width: 62%;
     }
+<<<<<<< HEAD
     article .about{
+=======
+	article .about{
+>>>>>>> origin/master
         padding-top: 70px;
     }
     article .bloglist{
